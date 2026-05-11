@@ -1,0 +1,34 @@
+name: Validate connector entries
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  validate:
+    name: JSON Schema
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
+
+      - name: Set up Python
+        uses: actions/setup-python@v5.3.0
+        with:
+          python-version: "3.12"
+
+      - name: Install check-jsonschema
+        run: pip install --no-cache-dir 'check-jsonschema==0.37.2'
+
+      - name: Validate connector entries against schema
+        run: |
+          set -euo pipefail
+          mapfile -d '' files < <(find connectors -type f \( -name '*.yaml' -o -name '*.yml' \) -print0 | sort -z)
+          if [ "${#files[@]}" -eq 0 ]; then
+            echo "No connector entries found under connectors/; nothing to validate."
+            exit 0
+          fi
+          echo "Validating ${#files[@]} entry file(s):"
+          printf '  %s\n' "${files[@]}"
+          check-jsonschema --schemafile schema/connector-entry.schema.json "${files[@]}"
