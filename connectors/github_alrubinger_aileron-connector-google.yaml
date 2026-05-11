@@ -1,0 +1,5 @@
+fqn: github://ALRubinger/aileron-connector-google
+description: Google Workspace connector (Calendar, Drive, Gmail)
+publisher_github: ALRubinger
+key_url: https://raw.githubusercontent.com/ALRubinger/aileron-connector-google/main/keys/publisher.pub
+release_pattern: v*

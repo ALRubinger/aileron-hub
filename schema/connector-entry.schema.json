@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ALRubinger/aileron-connectors-hub/schema/connector-entry.schema.json",
+  "title": "Aileron Hub connector entry",
+  "type": "object",
+  "required": ["fqn", "description", "publisher_github", "key_url", "release_pattern"],
+  "additionalProperties": false,
+  "properties": {
+    "fqn": {
+      "type": "string",
+      "pattern": "^github://[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?/[A-Za-z0-9._-]+$",
+      "description": "Canonical FQN. Must be github://OWNER/REPO."
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "publisher_github": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?$"
+    },
+    "key_url": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https://"
+    },
+    "release_pattern": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}
