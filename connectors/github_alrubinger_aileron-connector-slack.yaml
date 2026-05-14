@@ -1,0 +1,5 @@
+fqn: github://ALRubinger/aileron-connector-slack
+description: Slack connector (send-message, list-channels, search-messages)
+publisher_github: ALRubinger
+key_url: https://raw.githubusercontent.com/ALRubinger/aileron-connector-slack/main/keys/publisher.pub
+release_pattern: v*
