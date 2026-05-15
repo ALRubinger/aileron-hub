@@ -1,0 +1,9 @@
+fqn: github://ALRubinger/aileron-connector-google/actions/send-draft
+description: Send an existing Gmail draft by id (per-call approval).
+publisher_github: ALRubinger
+connector_fqn: github://ALRubinger/aileron-connector-google
+intents:
+  - send draft
+  - send the draft
+  - finish and send draft
+category: communication

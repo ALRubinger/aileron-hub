@@ -1,0 +1,9 @@
+fqn: github://ALRubinger/aileron-connector-google/actions/upload-file
+description: Upload a text file to Google Drive (per-call approval).
+publisher_github: ALRubinger
+connector_fqn: github://ALRubinger/aileron-connector-google
+intents:
+  - upload file
+  - upload to drive
+  - put file in drive
+category: productivity

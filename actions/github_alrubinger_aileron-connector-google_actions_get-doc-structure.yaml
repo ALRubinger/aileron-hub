@@ -1,0 +1,9 @@
+fqn: github://ALRubinger/aileron-connector-google/actions/get-doc-structure
+description: Fetch the structured JSON of a Google Doc so precise edits can target indices, paragraphs, headings, and styles.
+publisher_github: ALRubinger
+connector_fqn: github://ALRubinger/aileron-connector-google
+intents:
+  - get doc structure
+  - inspect google doc
+  - read doc structure for editing
+category: productivity

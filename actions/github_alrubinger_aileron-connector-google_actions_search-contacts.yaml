@@ -1,0 +1,9 @@
+fqn: github://ALRubinger/aileron-connector-google/actions/search-contacts
+description: Search Google Contacts by name, email, phone, or organization.
+publisher_github: ALRubinger
+connector_fqn: github://ALRubinger/aileron-connector-google
+intents:
+  - search contacts
+  - find a contact
+  - look up email by name
+category: communication

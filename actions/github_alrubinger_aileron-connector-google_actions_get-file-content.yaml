@@ -1,0 +1,9 @@
+fqn: github://ALRubinger/aileron-connector-google/actions/get-file-content
+description: Read the text content of a Google Drive file (Doc, Sheet, Slide, or text/* file).
+publisher_github: ALRubinger
+connector_fqn: github://ALRubinger/aileron-connector-google
+intents:
+  - read drive file
+  - get file contents
+  - open a google doc
+category: productivity

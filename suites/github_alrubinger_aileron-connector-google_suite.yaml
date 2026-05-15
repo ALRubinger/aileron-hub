@@ -1,0 +1,26 @@
+fqn: github://ALRubinger/aileron-connector-google/suite
+description: Read and draft Gmail; read and create calendar events; read Google Contacts; search, read, author, and edit Google Drive files and Docs.
+publisher_github: ALRubinger
+member_actions:
+  - github://ALRubinger/aileron-connector-google/actions/list-recent-emails
+  - github://ALRubinger/aileron-connector-google/actions/get-email
+  - github://ALRubinger/aileron-connector-google/actions/list-upcoming-events
+  - github://ALRubinger/aileron-connector-google/actions/draft-email
+  - github://ALRubinger/aileron-connector-google/actions/send-email
+  - github://ALRubinger/aileron-connector-google/actions/send-draft
+  - github://ALRubinger/aileron-connector-google/actions/get-draft
+  - github://ALRubinger/aileron-connector-google/actions/list-drafts
+  - github://ALRubinger/aileron-connector-google/actions/create-calendar-event
+  - github://ALRubinger/aileron-connector-google/actions/search-contacts
+  - github://ALRubinger/aileron-connector-google/actions/get-contact
+  - github://ALRubinger/aileron-connector-google/actions/list-contacts
+  - github://ALRubinger/aileron-connector-google/actions/search-files
+  - github://ALRubinger/aileron-connector-google/actions/get-file-content
+  - github://ALRubinger/aileron-connector-google/actions/get-doc-structure
+  - github://ALRubinger/aileron-connector-google/actions/get-file-metadata
+  - github://ALRubinger/aileron-connector-google/actions/create-doc
+  - github://ALRubinger/aileron-connector-google/actions/upload-file
+  - github://ALRubinger/aileron-connector-google/actions/update-doc
+  - github://ALRubinger/aileron-connector-google/actions/rename-file
+  - github://ALRubinger/aileron-connector-google/actions/move-file
+category: productivity

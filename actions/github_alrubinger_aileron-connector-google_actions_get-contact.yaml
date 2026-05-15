@@ -1,0 +1,9 @@
+fqn: github://ALRubinger/aileron-connector-google/actions/get-contact
+description: Fetch a single Google Contact by resource name.
+publisher_github: ALRubinger
+connector_fqn: github://ALRubinger/aileron-connector-google
+intents:
+  - get contact
+  - look up a contact
+  - find someone in contacts
+category: communication

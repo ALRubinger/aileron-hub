@@ -1,0 +1,9 @@
+fqn: github://ALRubinger/aileron-connector-google/actions/get-email
+description: Fetch headers and a snippet for a single Gmail message by id.
+publisher_github: ALRubinger
+connector_fqn: github://ALRubinger/aileron-connector-google
+intents:
+  - get email
+  - read email
+  - open gmail message
+category: communication

@@ -1,0 +1,9 @@
+fqn: github://ALRubinger/aileron-connector-slack/actions/search-messages
+description: Search Slack message history matching a query.
+publisher_github: ALRubinger
+connector_fqn: github://ALRubinger/aileron-connector-slack
+intents:
+  - search slack
+  - find slack messages
+  - search slack history
+category: communication

@@ -1,0 +1,9 @@
+fqn: github://ALRubinger/aileron-connector-slack/actions/send-message
+description: Send a Slack message to a channel on behalf of the user (per-call approval).
+publisher_github: ALRubinger
+connector_fqn: github://ALRubinger/aileron-connector-slack
+intents:
+  - send slack message
+  - post to slack
+  - message in slack
+category: communication

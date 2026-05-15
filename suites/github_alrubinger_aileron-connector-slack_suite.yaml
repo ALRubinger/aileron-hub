@@ -1,0 +1,8 @@
+fqn: github://ALRubinger/aileron-connector-slack/suite
+description: List Slack channels, search message history, and post messages as the authorizing user.
+publisher_github: ALRubinger
+member_actions:
+  - github://ALRubinger/aileron-connector-slack/actions/list-channels
+  - github://ALRubinger/aileron-connector-slack/actions/search-messages
+  - github://ALRubinger/aileron-connector-slack/actions/send-message
+category: communication

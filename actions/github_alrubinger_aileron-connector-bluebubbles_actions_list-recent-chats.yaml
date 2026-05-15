@@ -1,0 +1,9 @@
+fqn: github://ALRubinger/aileron-connector-bluebubbles/actions/list-recent-chats
+description: List iMessage conversations, ordered most-recent first.
+publisher_github: ALRubinger
+connector_fqn: github://ALRubinger/aileron-connector-bluebubbles
+intents:
+  - list imessage chats
+  - show recent imessages
+  - what imessage threads do i have
+category: communication

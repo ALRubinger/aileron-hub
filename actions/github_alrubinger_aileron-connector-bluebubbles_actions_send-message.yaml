@@ -1,0 +1,9 @@
+fqn: github://ALRubinger/aileron-connector-bluebubbles/actions/send-message
+description: Send an iMessage to a specific conversation on behalf of the user (per-call approval).
+publisher_github: ALRubinger
+connector_fqn: github://ALRubinger/aileron-connector-bluebubbles
+intents:
+  - send imessage
+  - imessage someone
+  - reply over imessage
+category: communication

@@ -1,0 +1,9 @@
+fqn: github://ALRubinger/aileron-connector-google/actions/list-drafts
+description: List Gmail drafts with subject, recipient, and snippet.
+publisher_github: ALRubinger
+connector_fqn: github://ALRubinger/aileron-connector-google
+intents:
+  - list drafts
+  - show my drafts
+  - what drafts do i have
+category: communication

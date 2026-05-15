@@ -1,0 +1,9 @@
+fqn: github://ALRubinger/aileron-connector-slack/actions/list-channels
+description: List the Slack channels the user has access to.
+publisher_github: ALRubinger
+connector_fqn: github://ALRubinger/aileron-connector-slack
+intents:
+  - list slack channels
+  - show my slack channels
+  - what channels am i in
+category: communication

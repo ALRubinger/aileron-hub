@@ -1,0 +1,9 @@
+fqn: github://ALRubinger/aileron-connector-google/actions/list-contacts
+description: List the user's Google Contacts.
+publisher_github: ALRubinger
+connector_fqn: github://ALRubinger/aileron-connector-google
+intents:
+  - list contacts
+  - show my contacts
+  - who do i know
+category: communication

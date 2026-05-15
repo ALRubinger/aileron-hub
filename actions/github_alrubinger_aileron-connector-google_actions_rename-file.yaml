@@ -1,0 +1,9 @@
+fqn: github://ALRubinger/aileron-connector-google/actions/rename-file
+description: Rename a Google Drive file (per-call approval).
+publisher_github: ALRubinger
+connector_fqn: github://ALRubinger/aileron-connector-google
+intents:
+  - rename file
+  - rename a drive file
+  - change file name
+category: productivity
