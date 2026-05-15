@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ALRubinger/aileron-connectors-hub/schema/action-entry.schema.json",
+  "title": "Aileron Hub action entry",
+  "type": "object",
+  "required": ["fqn", "description", "publisher_github", "connector_fqn"],
+  "additionalProperties": false,
+  "properties": {
+    "fqn": {
+      "type": "string",
+      "pattern": "^github://[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?/[A-Za-z0-9._-]+/actions/[A-Za-z0-9._-]+$",
+      "description": "Canonical FQN. Must be github://OWNER/REPO/actions/NAME."
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "publisher_github": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?$"
+    },
+    "connector_fqn": {
+      "type": "string",
+      "pattern": "^github://[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?/[A-Za-z0-9._-]+$",
+      "description": "FQN of the connector this action depends on. Must be github://OWNER/REPO."
+    },
+    "intents": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "category": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}
