@@ -1,0 +1,9 @@
+fqn: github://ALRubinger/aileron-connector-google/actions/move-file
+description: Move a Google Drive file to a different folder (per-call approval).
+publisher_github: ALRubinger
+connector_fqn: github://ALRubinger/aileron-connector-google
+intents:
+  - move file
+  - move a drive file
+  - reorganize drive
+category: productivity

@@ -1,0 +1,9 @@
+fqn: github://ALRubinger/aileron-connector-google/actions/draft-email
+description: Draft a Gmail message and save it to the Drafts folder.
+publisher_github: ALRubinger
+connector_fqn: github://ALRubinger/aileron-connector-google
+intents:
+  - draft email
+  - compose gmail
+  - save a draft
+category: communication

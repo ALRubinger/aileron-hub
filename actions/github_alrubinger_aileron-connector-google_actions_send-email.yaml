@@ -1,0 +1,9 @@
+fqn: github://ALRubinger/aileron-connector-google/actions/send-email
+description: Send an email from the user's Gmail account (per-call approval).
+publisher_github: ALRubinger
+connector_fqn: github://ALRubinger/aileron-connector-google
+intents:
+  - send email
+  - email someone
+  - send a gmail
+category: communication

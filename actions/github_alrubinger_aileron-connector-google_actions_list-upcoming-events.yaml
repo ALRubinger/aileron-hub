@@ -1,0 +1,9 @@
+fqn: github://ALRubinger/aileron-connector-google/actions/list-upcoming-events
+description: List upcoming Google Calendar events.
+publisher_github: ALRubinger
+connector_fqn: github://ALRubinger/aileron-connector-google
+intents:
+  - list calendar events
+  - what's on my calendar
+  - show my schedule
+category: communication

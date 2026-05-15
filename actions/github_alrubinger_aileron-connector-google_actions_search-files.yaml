@@ -1,0 +1,9 @@
+fqn: github://ALRubinger/aileron-connector-google/actions/search-files
+description: Search Google Drive for files by name, content, mimeType, folder, or modified-time.
+publisher_github: ALRubinger
+connector_fqn: github://ALRubinger/aileron-connector-google
+intents:
+  - search drive
+  - find a file
+  - search google docs
+category: productivity

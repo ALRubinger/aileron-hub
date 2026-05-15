@@ -1,0 +1,9 @@
+fqn: github://ALRubinger/aileron-connector-google/actions/get-draft
+description: Fetch headers and a snippet for a single Gmail draft by id.
+publisher_github: ALRubinger
+connector_fqn: github://ALRubinger/aileron-connector-google
+intents:
+  - get draft
+  - read a draft
+  - open a gmail draft
+category: communication

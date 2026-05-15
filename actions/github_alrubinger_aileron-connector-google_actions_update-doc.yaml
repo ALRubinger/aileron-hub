@@ -1,0 +1,9 @@
+fqn: github://ALRubinger/aileron-connector-google/actions/update-doc
+description: Apply structured edits to a Google Doc — insert text, replace text, delete a range, change styles, insert tables or images (per-call approval).
+publisher_github: ALRubinger
+connector_fqn: github://ALRubinger/aileron-connector-google
+intents:
+  - update doc
+  - edit google doc
+  - insert text into doc
+category: productivity

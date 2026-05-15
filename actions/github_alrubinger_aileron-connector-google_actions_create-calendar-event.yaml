@@ -1,0 +1,9 @@
+fqn: github://ALRubinger/aileron-connector-google/actions/create-calendar-event
+description: Create a Google Calendar event with the specified time and attendees (per-call approval).
+publisher_github: ALRubinger
+connector_fqn: github://ALRubinger/aileron-connector-google
+intents:
+  - create calendar event
+  - schedule a meeting
+  - book time on my calendar
+category: communication

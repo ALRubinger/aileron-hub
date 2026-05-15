@@ -1,0 +1,9 @@
+fqn: github://ALRubinger/aileron-connector-google/actions/create-doc
+description: Create a new Google Doc, optionally with initial body content (per-call approval).
+publisher_github: ALRubinger
+connector_fqn: github://ALRubinger/aileron-connector-google
+intents:
+  - create google doc
+  - new doc
+  - start a document
+category: productivity

@@ -1,0 +1,9 @@
+fqn: github://ALRubinger/aileron-connector-google/actions/get-file-metadata
+description: Look up a Google Drive file's metadata (name, mimeType, parents, modifiedTime, owners).
+publisher_github: ALRubinger
+connector_fqn: github://ALRubinger/aileron-connector-google
+intents:
+  - get file metadata
+  - file details
+  - drive file info
+category: productivity

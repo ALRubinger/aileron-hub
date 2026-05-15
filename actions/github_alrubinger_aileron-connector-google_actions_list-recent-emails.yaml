@@ -1,0 +1,9 @@
+fqn: github://ALRubinger/aileron-connector-google/actions/list-recent-emails
+description: List recent Gmail messages with subject, sender, and snippet.
+publisher_github: ALRubinger
+connector_fqn: github://ALRubinger/aileron-connector-google
+intents:
+  - list recent emails
+  - show my gmail inbox
+  - what's in my inbox
+category: communication

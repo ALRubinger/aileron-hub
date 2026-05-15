@@ -1,0 +1,8 @@
+fqn: github://ALRubinger/aileron-connector-bluebubbles/suite
+description: Read and list iMessage conversations on macOS via the local BlueBubbles bridge; send iMessages with per-call approval.
+publisher_github: ALRubinger
+member_actions:
+  - github://ALRubinger/aileron-connector-bluebubbles/actions/list-recent-chats
+  - github://ALRubinger/aileron-connector-bluebubbles/actions/read-chat
+  - github://ALRubinger/aileron-connector-bluebubbles/actions/send-message
+category: communication

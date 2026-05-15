@@ -1,0 +1,9 @@
+fqn: github://ALRubinger/aileron-connector-bluebubbles/actions/read-chat
+description: Read recent messages from a specific iMessage conversation.
+publisher_github: ALRubinger
+connector_fqn: github://ALRubinger/aileron-connector-bluebubbles
+intents:
+  - read imessage chat
+  - open imessage thread
+  - show messages from chat
+category: communication
