@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ALRubinger/aileron-connectors-hub/schema/suite-entry.schema.json",
+  "title": "Aileron Hub action-suite entry",
+  "type": "object",
+  "required": ["fqn", "description", "publisher_github", "member_actions"],
+  "additionalProperties": false,
+  "properties": {
+    "fqn": {
+      "type": "string",
+      "pattern": "^github://[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?/[A-Za-z0-9._-]+/(?:suite|suites/[A-Za-z0-9._-]+)$",
+      "description": "Canonical FQN. Must be github://OWNER/REPO/suite (single suite) or github://OWNER/REPO/suites/NAME (named/nested)."
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "publisher_github": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?$"
+    },
+    "member_actions": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^github://[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?/[A-Za-z0-9._-]+/actions/[A-Za-z0-9._-]+$"
+      }
+    },
+    "connectors_required": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^github://[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?/[A-Za-z0-9._-]+$"
+      },
+      "description": "Optional. If present, CI verifies it equals the union of member_actions[].connector_fqn (set-equality, order-independent)."
+    },
+    "category": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

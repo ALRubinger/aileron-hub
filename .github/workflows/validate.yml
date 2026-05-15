@@ -1,4 +1,4 @@
-name: Validate connector entries
+name: Validate hub entries
 
 on:
   pull_request:
@@ -18,10 +18,10 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install check-jsonschema
-        run: pip install --no-cache-dir 'check-jsonschema==0.37.2'
+      - name: Install check-jsonschema and PyYAML
+        run: pip install --no-cache-dir 'check-jsonschema==0.37.2' 'PyYAML==6.0.2'
 
-      - name: Validate connector entries against schema
+      - name: Validate connector entries
         run: |
           set -euo pipefail
           mapfile -d '' files < <(find connectors -type f \( -name '*.yaml' -o -name '*.yml' \) -print0 | sort -z)
@@ -29,6 +29,41 @@ jobs:
             echo "No connector entries found under connectors/; nothing to validate."
             exit 0
           fi
-          echo "Validating ${#files[@]} entry file(s):"
+          echo "Validating ${#files[@]} connector entry file(s):"
           printf '  %s\n' "${files[@]}"
           check-jsonschema --schemafile schema/connector-entry.schema.json "${files[@]}"
+
+      - name: Validate action entries
+        run: |
+          set -euo pipefail
+          if [ ! -d actions ]; then
+            echo "No actions/ directory; nothing to validate."
+            exit 0
+          fi
+          mapfile -d '' files < <(find actions -type f \( -name '*.yaml' -o -name '*.yml' \) -print0 | sort -z)
+          if [ "${#files[@]}" -eq 0 ]; then
+            echo "No action entries found under actions/; nothing to validate."
+            exit 0
+          fi
+          echo "Validating ${#files[@]} action entry file(s):"
+          printf '  %s\n' "${files[@]}"
+          check-jsonschema --schemafile schema/action-entry.schema.json "${files[@]}"
+
+      - name: Validate suite entries
+        run: |
+          set -euo pipefail
+          if [ ! -d suites ]; then
+            echo "No suites/ directory; nothing to validate."
+            exit 0
+          fi
+          mapfile -d '' files < <(find suites -type f \( -name '*.yaml' -o -name '*.yml' \) -print0 | sort -z)
+          if [ "${#files[@]}" -eq 0 ]; then
+            echo "No suite entries found under suites/; nothing to validate."
+            exit 0
+          fi
+          echo "Validating ${#files[@]} suite entry file(s):"
+          printf '  %s\n' "${files[@]}"
+          check-jsonschema --schemafile schema/suite-entry.schema.json "${files[@]}"
+
+      - name: Verify suite closures (member_actions resolve; connectors_required matches union)
+        run: python scripts/validate_suite_closures.py
